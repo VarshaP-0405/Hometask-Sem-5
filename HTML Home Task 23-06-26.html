@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM and Alert Example</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="message">Welcome!</h2>
+    <button onclick="changeText()">Click Me</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("message").textContent = "Text Changed Successfully!";
+            alert("Button Clicked!");
+        }
+    </script>
+
+</body>
+</html>
