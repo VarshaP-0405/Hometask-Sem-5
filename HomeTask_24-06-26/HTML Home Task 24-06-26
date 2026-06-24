@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basilisk Name Validator</title>
+    <style>
+        body {
+            background-color: darkgreen;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 3px solid limegreen;
+            border-radius: 10px;
+            background-color: #0b3d0b;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px;
+            border: 2px solid limegreen;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: limegreen;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: yellowgreen;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        img {
+            width: 250px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🐍 Basilisk Kingdom 🐍</h1>
+
+        <img src="basilisk.jpg"
+             alt="Basilisk">
+
+        <p>Enter the name of your Basilisk:</p>
+
+        <input type="text" id="basiliskName" placeholder="Enter Basilisk Name">
+
+        <br>
+
+        <button id="validateBtn">Summon Basilisk</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // Add Event Listener to Button
+        document.getElementById("validateBtn")
+        .addEventListener("click", validateBasilisk);
+
+        // Validate Input Function
+        function validateBasilisk() {
+            let name = document.getElementById("basiliskName").value.trim();
+            let message = document.getElementById("message");
+
+            if (name === "") {
+                message.innerHTML =
+                    "⚠️ The Basilisk refuses to appear! Enter a name.";
+                message.style.color = "yellow";
+            } else {
+                message.innerHTML =
+                    "🐍 Welcome, mighty Basilisk '" + name + "'!";
+                message.style.color = "lightgreen";
+            }
+        }
+    </script>
+
+</body>
+</html>
